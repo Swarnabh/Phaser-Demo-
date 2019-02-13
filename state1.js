@@ -7,6 +7,9 @@ Game.state1.prototype = {
     console.log("state1");
 
     addChangeStateEventListeners();
+
+    //To make our game screen resizeable as per window size
+    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
   },
   update: function() {}
 };
