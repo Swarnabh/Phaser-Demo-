@@ -1,0 +1,11 @@
+var game = new Phaser.Game(600, 400, Phaser.AUTO);
+game.state.add("state1", Game.state1);
+game.state.add("state2", Game.state2);
+game.state.add("state3", Game.state3);
+game.state.add("state4", Game.state4);
+game.state.add("state5", Game.state5);
+game.state.add("state6", Game.state6);
+game.state.add("state7", Game.state7);
+game.state.add("state8", Game.state8);
+game.state.add("state9", Game.state9);
+game.state.start("state1");
