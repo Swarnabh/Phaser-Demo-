@@ -1,17 +1,39 @@
 var Game = {};
+var centerX = 1500 / 2;
+var centerY = 1000 / 2;
+var adam;
+var speed = 5;
 Game.state1 = function() {};
 Game.state1.prototype = {
-  preload: function() {},
+  preload: function() {
+    game.load.image("adam", "assets/images/Adam.png");
+  },
   create: function() {
-    game.stage.backgroundColor = "#ececec";
+    game.stage.backgroundColor = "#6699ff";
     console.log("state1");
 
     addChangeStateEventListeners();
 
     //To make our game screen resizeable as per window size
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+    //Adding Adam Image in the scene.
+    adam = game.add.sprite(centerX, centerY, "adam");
+    adam.anchor.setTo(0.5, 0.5);
   },
-  update: function() {}
+  update: function() {
+    //Sideway Movement
+    if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
+      adam.x += speed;
+    } else if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
+      adam.x -= speed;
+    }
+    //Vertical Movement
+    if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
+      adam.y -= speed;
+    } else if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
+      adam.y += speed;
+    }
+  }
 };
 
 function changeState(i, stateNum) {
