@@ -33,12 +33,30 @@
  "tileheight":32,
  "tilesets":[
         {
+         "columns":3,
          "firstgid":1,
-         "source":"rock.tsx"
+         "image":"rock.png",
+         "imageheight":96,
+         "imagewidth":96,
+         "margin":0,
+         "name":"rock",
+         "spacing":0,
+         "tilecount":9,
+         "tileheight":32,
+         "tilewidth":32
         }, 
         {
+         "columns":1,
          "firstgid":10,
-         "source":"grass.tsx"
+         "image":"grass.png",
+         "imageheight":64,
+         "imagewidth":32,
+         "margin":0,
+         "name":"grass",
+         "spacing":0,
+         "tilecount":2,
+         "tileheight":32,
+         "tilewidth":32
         }],
  "tilewidth":32,
  "type":"map",
